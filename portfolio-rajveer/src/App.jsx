@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import './App.scss'
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
+import Layout from './components/Layout/Layout.jsx'
 
 function App() {
   return (
