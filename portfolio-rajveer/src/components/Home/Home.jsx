@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Home/Home.scss'
 import LogoR from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
@@ -37,12 +37,25 @@ const Home = () => {
     'r',
     '.',
   ]
+
+  useEffect(() => {
+    function hoverTime() {
+      setTimeout(() => {
+        setLetterClass('text-aninmate-hover')
+      }, 4000)
+    }
+    hoverTime()
+  }, [])
   return (
     <>
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            Hi, <br /> I'm
+            <span className="letterClass">H</span>
+            <span className={`${letterClass} _12`}>i,</span>
+            <br />
+            <span className={`${letterClass} _13`}>I'</span>
+            <span className={`${letterClass} _14`}>m</span>
             <img src={LogoR} alt="Rajveer" />
             {/* ajveer Narang */}
             <AnimatedL
@@ -51,7 +64,8 @@ const Home = () => {
               idx={15}
             />
             <br />
-            Web Developer
+            {/* Web Developer */}
+            <AnimatedL letterClass={letterClass} strArray={jobArray} idx={28} />
           </h1>
           <h2>Frontend Developer / Writer / Photographer</h2>
           <Link to="/contact" className="flat-button">
