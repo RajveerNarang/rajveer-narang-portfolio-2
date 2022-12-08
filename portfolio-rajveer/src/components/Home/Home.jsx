@@ -41,7 +41,7 @@ const Home = () => {
   useEffect(() => {
     function hoverTime() {
       setTimeout(() => {
-        setLetterClass('text-aninmate-hover')
+        setLetterClass('text-animate-hover')
       }, 4000)
     }
     hoverTime()
@@ -51,7 +51,7 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            <span className="letterClass">H</span>
+            <span className={`${letterClass} _11`}>H</span>
             <span className={`${letterClass} _12`}>i,</span>
             <br />
             <span className={`${letterClass} _13`}>I'</span>
